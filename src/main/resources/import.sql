@@ -1,0 +1,2 @@
+insert into USER (user_id, password, name, email) values('hong', '1234', 'gilDong', 'gg@naver.com');
+insert into USER (user_id, password, name, email) values('kim' , '1234', 'gapsoon', 'kg@naver.com');

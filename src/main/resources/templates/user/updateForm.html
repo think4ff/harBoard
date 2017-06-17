@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> /include/header}}
+</head>
+<body>
+	{{> /include/navigation}}
+	
+	<h1>Modification page</h1>
+	<br />
+	<div class="container">
+		{{#user}}
+		<form name="userModification" action="/users/{{id}}" method="post">
+			<!-- <input type="hidden" name="id" value="{{id}}" /> -->
+			<!-- controller에서 PutMapping 으로 받을 수 있다 -->
+			<input type="hidden" name="_method" value="put" /> 
+			<div class="form-group">
+				<label for="userId">User ID</label> <input type="text" class="form-control" name="userId" placeholder="UserId" value="{{userId}}">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label> <input type="password" class="form-control" name="password"
+					placeholder="Password" value="">
+			</div>
+			<div class="form-group">
+				<label for="name">NAME</label> <input type="text" class="form-control" name="name" placeholder="Name" value="{{name}}">
+			</div>
+			<div class="form-group">
+				<label for="name">Email</label> <input type="text" class="form-control" name="email" placeholder="Email" value="{{email}}">
+			</div>
+
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		{{/user}}
+	</div>
+
+{{> /include/footer}}
+</body>
+</html>
